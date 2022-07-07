@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+ name: sftp-data-pvc
+ namespace: ms
+spec:
+ accessModes:
+ - ReadWriteOnce
+ volumeMode: Filesystem
+ resources:
+ requests:
+ storage: 1Gi # Adjust to reasonable value
+ storageClassName: local-path # Adjust to available storage class
